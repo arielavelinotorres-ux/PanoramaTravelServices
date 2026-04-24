@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panorama Travel Services</title>
+  <meta name="description" content="Selecciona tu producto y paga directamente con los enlaces seguros de Panorama Travel." />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/carrito.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="assets/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="assets/favicon-192.png" />
+  <meta name="theme-color" content="#ff9b1c" />
+</head>
+<body class="ticket-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <img src="assets/logo.png" alt="Panorama Travel" class="logo" />
+      <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch to Spanish">ES</button>
+      <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu" data-aria-en="Open menu" data-aria-es="Abrir menú">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="main-nav" class="main-nav" role="navigation">
+        <a href="index.html" class="nav-link" data-i18n data-en="Home" data-es="Inicio">Home</a>
+        <a href="tramites.html" class="nav-link" data-i18n data-en="Documents" data-es="Trámites">Documents</a>
+        <a href="carga.html" class="nav-link" data-i18n data-en="Cargo" data-es="Carga">Cargo</a>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <a href="Boletos.html" class="nav-link" data-i18n data-en="Tickets" data-es="Boletos">Tickets</a>
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="boletos-menu" aria-label="View ticket destinations" data-aria-en="View ticket destinations" data-aria-es="Ver destinos de boletos">
+              <span class="caret"></span>
+            </button>
+          </div>
+          <div id="boletos-menu" class="dropdown-menu" role="menu">
+            <div class="submenu">
+              <span class="submenu-title" data-i18n data-en="America" data-es="América">America</span>
+              <a href="Paises/boletos-mexico.html" class="dropdown-item" data-i18n data-en="Mexico" data-es="México">Mexico</a>
+              <a href="Paises/boletos-usa.html" class="dropdown-item" data-i18n data-en="United States" data-es="Estados Unidos">United States</a>
+              <a href="Paises/boletos-canada.html" class="dropdown-item" data-i18n data-en="Canada" data-es="Canadá">Canada</a>
+            </div>
+            <div class="submenu">
+              <span class="submenu-title" data-i18n data-en="Europe" data-es="Europa">Europe</span>
+              <a href="Paises/boletos-espana.html" class="dropdown-item" data-i18n data-en="Spain" data-es="España">Spain</a>
+              <a href="Paises/boletos-francia.html" class="dropdown-item" data-i18n data-en="France" data-es="Francia">France</a>
+              <a href="Paises/boletos-alemania.html" class="dropdown-item" data-i18n data-en="Germany" data-es="Alemania">Germany</a>
+            </div>
+            <div class="submenu">
+              <span class="submenu-title" data-i18n data-en="Asia" data-es="Asia">Asia</span>
+              <a href="Paises/boletos-japon.html" class="dropdown-item" data-i18n data-en="Japan" data-es="Japón">Japan</a>
+              <a href="Paises/boletos-china.html" class="dropdown-item" data-i18n data-en="China" data-es="China">China</a>
+              <a href="Paises/boletos-india.html" class="dropdown-item" data-i18n data-en="India" data-es="India">India</a>
+            </div>
+          </div>
+        </div>
+        <a href="corporativo.html" class="nav-link" data-i18n data-en="Corporate" data-es="Corporativo">Corporate</a>
+        <a href="contacto.html" class="nav-link" data-i18n data-en="Contact" data-es="Contacto">Contact</a>
+        <a href="carrito.html" class="btn-carrito is-active" aria-label="Cart" title="Cart" data-aria-en="Cart" data-aria-es="Carrito" data-title-en="Cart" data-title-es="Carrito">🛒</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cart-page">
+    <section class="cart-shell">
+      <div class="cart-head">
+        <div>
+          <p class="cart-kicker" data-i18n data-en="Panorama Direct Pay" data-es="Panorama Pago Directo">Panorama Pago Directo</p>
+          <h1 data-i18n data-en="Choose your product and pay" data-es="Elige tu producto y paga">Elige tu producto y paga</h1>
+        </div>
+      </div>
+
+      <section class="catalog-section">
+        <div class="catalog-column">
+          <div class="section-header">
+            <h2 data-i18n data-en="Available products" data-es="Productos disponibles">Productos disponibles</h2>
+            <span data-i18n data-en="Each option opens its own direct payment link" data-es="Cada opción abre su propio enlace directo de pago">Cada opción abre su propio enlace directo de pago</span>
+          </div>
+          <div id="shipping-options" class="shipping-options"></div>
+
+          <section class="preview-card pickup-card">
+            <div class="section-title-row">
+              <h2 data-i18n data-en="Delivery and support" data-es="Entrega y soporte">Entrega y soporte</h2>
+            </div>
+            <div class="pickup-line">
+              <span class="line-icon">📍</span>
+              <span id="pickup-location">10508 W Flagler St Miami, FL 33174-1631 EE. UU.</span>
+            </div>
+            <div class="pickup-line">
+              <span class="line-icon">🕒</span>
+              <span id="pickup-status">Disponible actualmente</span>
+            </div>
+            <div class="instructions-block">
+              <span data-i18n data-en="Instructions" data-es="Instrucciones">Instrucciones</span>
+              <p id="pickup-instructions">Después de pagar, comparte tu comprobante con el equipo de Panorama para coordinar la entrega o recepción del producto.</p>
+            </div>
+          </section>
+
+          <section class="checkout-form checkout-form--compact">
+            <section class="checkout-section checkout-section--payment direct-pay-card">
+              <div class="direct-pay-actions">
+                
+
+                <a id="direct-pay-link" class="submit-payment" href="https://square.link/u/uWqPJSoE" target="_blank" rel="noopener noreferrer" data-i18n-link-en="Pay now" data-i18n-link-es="Page ahora">Page ahora</a>
+
+              </div>
+            </section>
+          </section>
+        </div>
+
+        <aside class="preview-column">
+          <div id="poster-card" class="poster-card tone-sunrise has-image">
+            <img id="poster-image" class="poster-image" src="IMG/Promociones/$35 Cel.png" alt="Promoción de celulares a Nicaragua por 35 dólares" />
+          </div>
+
+          <div class="preview-card">
+            <div class="preview-head">
+              <span id="selected-badge" class="preview-badge">Promoción exclusiva</span>
+              <h2 id="selected-title">Promoción Celular</h2>
+              <p id="selected-price" class="preview-price">35,00 dólares estadounidenses</p>
+            </div>
+
+            <p id="selected-summary" class="preview-summary">Promoción exclusiva para envíos de celulares a Nicaragua con retiro en oficina de Managua.</p>
+
+            <div class="detail-group">
+              <h3 data-i18n data-en="Includes" data-es="Incluye">Incluye</h3>
+              <ul id="selected-highlights" class="detail-list"></ul>
+            </div>
+
+            <div class="detail-group">
+              <h3 data-i18n data-en="Conditions" data-es="Condiciones">Condiciones</h3>
+              <ul id="selected-requirements" class="detail-list detail-list--requirements"></ul>
+            </div>
+
+            <div class="detail-group">
+              <h3 data-i18n data-en="Payment notes" data-es="Notas de pago">Notas de pago</h3>
+              <ul id="selected-payment-notes" class="detail-list detail-list--notes"></ul>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </section>
+  </main>
+
+  <script src="assets/script.js" defer></script>
+  <script src="assets/carrito.js" defer></script>
+</body>
+</html>
